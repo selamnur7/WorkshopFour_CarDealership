@@ -1,8 +1,6 @@
 package com.ps;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 
 public class DealershipFileManager {
 
@@ -41,6 +39,18 @@ public class DealershipFileManager {
 
         } catch (IOException e){
             e.printStackTrace();
+        }
+
+    }
+    public static void writeToFile(String path, String str) {
+        try {
+
+            BufferedWriter bufWriter = new BufferedWriter(new FileWriter(path, true));
+            bufWriter.write(str);
+            bufWriter.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+            throw new RuntimeException(e);
         }
     }
 }

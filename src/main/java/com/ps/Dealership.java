@@ -47,10 +47,12 @@ public class Dealership {
         inventory.remove(vehicle);
     }
 
-    public static Object getVehiclesByPrice(double price){
+    public static void getVehiclesByPrice(double price){
+    }
+    public static Object getVehiclesByMake(String make){
         return null;
     }
-    public static Object getVehiclesByMakeModel(String make, String model){
+    public static Object getVehiclesByModel(String model){
         return null;
     }
     public static Object getVehiclesByYear(int year){
