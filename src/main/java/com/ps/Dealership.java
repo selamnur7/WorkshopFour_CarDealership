@@ -47,25 +47,35 @@ public class Dealership {
         inventory.remove(vehicle);
     }
 
-    public Object getVehiclesByPrice(double price){
+    public static Object getVehiclesByPrice(double price){
         return null;
     }
-    public Object getVehiclesByMakeModel(String make, String model){
+    public static Object getVehiclesByMakeModel(String make, String model){
         return null;
     }
-    public Object getVehiclesByYear(int year){
+    public static Object getVehiclesByYear(int year){
         return null;
     }
-    public Object getVehiclesByColor(String color){
+    public static Object getVehiclesByColor(String color){
         return null;
     }
-    public Object getVehiclesByMilage(int odometer){
+    public static Object getVehiclesByMilage(int odometer){
         return null;
     }
-    public Object getVehiclesByType(String vehicleType){
+    public static Object getVehiclesByType(String vehicleType){
         return null;
     }
     public ArrayList <Vehicle> showAllVehicles(){
         return this.inventory;
+    }
+
+    @Override
+    public String toString() {
+        return "Dealership{" +
+                "name='" + name + '\'' +
+                ", address='" + address + '\'' +
+                ", phone='" + phone + '\'' +
+                ", inventory=" + inventory +
+                '}';
     }
 }

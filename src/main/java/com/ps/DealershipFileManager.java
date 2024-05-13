@@ -6,7 +6,7 @@ import java.io.IOException;
 
 public class DealershipFileManager {
 
-    private void getDealership(){
+    public static void getDealership(){
         try{
             BufferedReader bufReader = new BufferedReader(new FileReader("DealershipInventory"));
             int lineCounter = 0;
@@ -17,7 +17,8 @@ public class DealershipFileManager {
                     String name = dealershipSplitLine[0];
                     String address = dealershipSplitLine[1];
                     String phone = dealershipSplitLine[2];
-
+                    Dealership dealership = new Dealership(name, address, phone);
+                    System.out.println(dealership);
                     lineCounter++;
 
                 } else {
@@ -31,6 +32,7 @@ public class DealershipFileManager {
                     int odometer = Integer.parseInt(vehicleSplitLine[6]);
                     double price = Double.parseDouble(vehicleSplitLine[7]);
                     Vehicle vehicle = new Vehicle(vin, year, make, model, vehicleType, color, odometer, price);
+                    System.out.println(vehicle);
                     lineCounter++;
 
                 }
