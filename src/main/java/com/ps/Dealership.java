@@ -47,29 +47,58 @@ public class Dealership {
         inventory.remove(vehicle);
     }
 
-    public static void getVehiclesByPrice(double price){
+    public void getVehiclesByPrice(double userCarPrice){
+        for (Vehicle vehicle : inventory) {
+            if (vehicle.getPrice() == userCarPrice);
+            System.out.println(vehicle);
+
+        }
     }
-    public static Object getVehiclesByMake(String make){
-        return null;
+    public void getVehiclesByMake(String make){
+        for (Vehicle vehicle : inventory) {
+            if (vehicle.getMake().equalsIgnoreCase(make));
+            System.out.println(vehicle);
+
+        }
     }
-    public static Object getVehiclesByModel(String model){
-        return null;
+    public void getVehiclesByModel(String model){
+        for (Vehicle vehicle : inventory) {
+            if (vehicle.getModel().equalsIgnoreCase(model));
+            System.out.println(vehicle);
+
+        }
     }
-    public static Object getVehiclesByYear(int year){
-        return null;
+    public void getVehiclesByYear(int year){
+        for (Vehicle vehicle : inventory) {
+            if (vehicle.getYear() == year);
+            System.out.println(vehicle);
+
+        }
     }
-    public static Object getVehiclesByColor(String color){
-        return null;
+    public void getVehiclesByColor(String color){
+        for (Vehicle vehicle : inventory) {
+            if (vehicle.getColor().equalsIgnoreCase(color));
+            System.out.println(vehicle);
+
+        }
     }
-    public static Object getVehiclesByMilage(int odometer){
-        return null;
+    public void getVehiclesByMilage(int odometer){
+        for (Vehicle vehicle : inventory) {
+            if (vehicle.getOdometer() == odometer);
+            System.out.println(vehicle);
+
+        }
     }
-    public static Object getVehiclesByType(String vehicleType){
-        return null;
+    public void getVehiclesByType(String vehicleType){
+        for (Vehicle vehicle : inventory) {
+            if (vehicle.getVehicleType().equalsIgnoreCase(vehicleType));
+            System.out.println(vehicle);
+
+        }
     }
-    public ArrayList <Vehicle> showAllVehicles(){
-        return this.inventory;
-    }
+//    public ArrayList <Vehicle> showAllVehicles(){
+//        return this.inventory;
+//    }
 
     @Override
     public String toString() {

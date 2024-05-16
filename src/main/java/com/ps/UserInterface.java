@@ -7,8 +7,10 @@ import static com.ps.DealershipFileManager.writeToFile;
 
 
 public class UserInterface {
-    private ArrayList<Dealership> dealership = new ArrayList<>();
+    ArrayList<Dealership> dealership = new ArrayList<>();
     static Scanner scanner = new Scanner(System.in);
+
+    static Dealership dealership2 = new Dealership("Bone's Dealership", "1600 Washington Avenue", "646-984-1010");
 
     public static void display() {
 
@@ -65,44 +67,51 @@ public class UserInterface {
 
 
     }
-    private static void processGetByPrice(){
+    public static void processGetByPrice(){
         System.out.println("What is the price of the car? ");
         double userCarPrice = scanner.nextDouble();
-        getVehiclesByPrice(userCarPrice);
+        scanner.nextLine();
+        dealership2.getVehiclesByPrice(userCarPrice);
 
     }
-    private static void processGetByMake(){
+    public static void processGetByMake(){
         System.out.println("What is the Make of the car? ");
         String userCarMake = scanner.nextLine();
-        getVehiclesByMake(userCarMake);
+        scanner.nextLine();
+        dealership2.getVehiclesByMake(userCarMake);
     }
-    private static void processGetByModel(){
+    public static void processGetByModel(){
         System.out.println("What is the Model of the car? ");
         String userCarModel = scanner.nextLine();
-        getVehiclesByModel(userCarModel);
+        scanner.nextLine();
+        dealership2.getVehiclesByModel(userCarModel);
     }
-    private static void processGetByYear(){
+    public static void processGetByYear(){
         System.out.println("What is the year of the car? ");
         int userCarYear = scanner.nextInt();
-        getVehiclesByYear(userCarYear);
+        scanner.nextLine();
+        dealership2.getVehiclesByYear(userCarYear);
 
     }
-    private static void processGetByColor(){
+    public static void processGetByColor(){
         System.out.println("What is the color of the car? ");
         String userCarColor = scanner.nextLine();
-        getVehiclesByColor(userCarColor);
+        scanner.nextLine();
+        dealership2.getVehiclesByColor(userCarColor);
 
     }
-    private static void processGetByMileage(){
+    public static void processGetByMileage(){
         System.out.println("What is the mileage of the car? ");
         int userCarMileage = scanner.nextInt();
-        getVehiclesByMilage(userCarMileage);
+        scanner.nextLine();
+        dealership2.getVehiclesByMilage(userCarMileage);
 
     }
-    private static void processGetByType(){
+    public static void processGetByType(){
         System.out.println("What is the Type of the car? ");
         String userCarType = scanner.nextLine();
-        getVehiclesByType(userCarType);
+        scanner.nextLine();
+        dealership2.getVehiclesByType(userCarType);
 
     }
     private static void processAddVehicle(){
@@ -139,6 +148,10 @@ public class UserInterface {
                 userCarMileage,
                 userCarType,
                 userNewCarPrice));
+    }
+
+    private static void processDeleteVehicle(){
+
     }
 
 
